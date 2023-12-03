@@ -37,10 +37,8 @@ def main():
 
         for i, row in enumerate(rows):
             for m in num_regex.finditer(row):
-                num_start_index = m.start()
-                num = m.group()
                 has_adj_symbol = False
-                for j in range(num_start_index, num_start_index + len(num)):
+                for j in range(m.start(), m.end()):
                     for x, y in get_adj_coords(i, j):
                         cell = safe_row_index(rows, x, y)
                         if cell and is_symbol(cell):
@@ -48,7 +46,7 @@ def main():
                             break
 
                     if has_adj_symbol:
-                        total += int(num)
+                        total += int(m.group())
                         break
 
         print("answer:", total)

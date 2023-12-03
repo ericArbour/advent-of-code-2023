@@ -44,8 +44,7 @@ def main():
                             [
                                 num_index
                                 for num_index in adj_row_adj_num_indexes
-                                if num_index >= m.start()
-                                and num_index < m.start() + len(m.group())
+                                if num_index >= m.start() and num_index < m.end()
                             ]
                         )
                     ]
