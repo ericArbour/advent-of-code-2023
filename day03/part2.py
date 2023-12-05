@@ -3,7 +3,7 @@ from part1 import get_adj_coords
 from part1 import safe_row_index
 from part1 import num_regex
 
-star_regex = re.compile("\*")
+star_regex = re.compile(r"\*")
 
 
 def is_number(string):

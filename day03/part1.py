@@ -1,7 +1,7 @@
 import re
 
-num_regex = re.compile("\d+")
-symbol_regex = re.compile("[^.|^\d]")
+num_regex = re.compile(r"\d+")
+symbol_regex = re.compile(r"[^.|^\d]")
 
 
 def is_symbol(string):

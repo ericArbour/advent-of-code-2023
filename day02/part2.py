@@ -1,4 +1,3 @@
-from dataclasses import dataclass
 from part1 import line_to_game
 
 
