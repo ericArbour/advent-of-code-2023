@@ -10,7 +10,7 @@ def get_diffs(history):
 def extrapolate(history):
     rows = [history]
 
-    while not all(num == 0 for num in rows[-1]):
+    while any(rows[-1]):
         diffs = get_diffs(rows[-1])
         rows.append(diffs)
 
